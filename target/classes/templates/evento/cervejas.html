@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+
+	<title>BeerHere</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+	<h1>Tipos de Cerveja</h1>
+	<h3><a href="/" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>HOME</a></h3>
+	<h3><a href="/cadastrarCerveja" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Cadastrar Cerveja</a></h3>
+	<table class="container">
+		<thead>
+		<tr>
+			<th>Nome</th>
+			<th>Marca</th>
+			<th>Tipo</th>
+			<th>Descricao</th>
+		</tr>
+		</thead>
+		<tbody>	
+			<tr th:each = "cerveja : ${cervejas}">			
+				<td><span th:text="${cerveja.nome}"></span></td>
+				<td><span th:text="${cerveja.marca}"></span></td>
+				<td><span th:text="${cerveja.tipo}"></span></td>
+				<td><span th:text="${cerveja.descricao}"></span></td>		
+			</tr>
+		</tbody>
+	</table>
+
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+</html>
