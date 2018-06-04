@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+
+	<title>BeerHere</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+<h1>Cadastro Cerveja</h1>
+<a href ="/cervejas" class="waves-effect waves-light btn"><i class="material-icons left">dehaze</i>Lista de Cervejas</a>
+		<form class="container" method= "post">
+			Nome:<input type ="text" value="" name="nome"/>
+			<div class="row">
+				<div class="input-field col s3">
+					Marca:<input type ="text" value="" name="marca"/>
+				</div>			
+				<div class="input-field col s8">	
+					Descricao:<input type ="text" value="" name="descricao"/>
+				</div>	
+			</div>
+			<button class="waves-effect waves-light btn" type="submit" >salvar</button>	
+
+	</form>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+</html>
